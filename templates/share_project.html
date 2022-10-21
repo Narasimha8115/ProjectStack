@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+                <main class="row overflow-auto">
+
+                    <section class="vh-100" style="background-color: #eee;">
+                        <div class="container h-100 ">
+                            <div class="row d-flex justify-content-center align-items-center h-100">
+                                <div class="col-lg-12 col-xl-11 ">
+                                    <div class="card text-black  mt-5" style="border-radius: 10px;">
+                                        <div class="card-body p-md-5 ">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-10 col-lg-6 col-xl-10 order-2 order-lg-1 ">
+
+                                                    <p class="text-center h2 bold mb-5 mx-1 mx-md-4 mt-4 Sign-up-name">
+                                                        Enter project Details</p>
+
+                                                    <form action="/create-project" method="POST" enctype="multipart/form-data">
+                                                        {% csrf_token %}
+                                                    
+                                                    <!---error message-->
+                                                    {% if success %}
+                                                    <p class="message">{{ success }}</p>
+                                                    {% endif %}
+
+
+                                                        {% if notsuccessfull %}
+                                                        <p class="message">{{ notsuccessfull }}</p>
+                                                        {% endif %}
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-6">
+                                                                <label for="inputEmail4">Title of the Project</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="inputEmail4" placeholder="Title" name="title_of_pro">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="inputPassword4">Category</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="inputPassword4"
+                                                                    placeholder="ex:Machine Learning" name="category_of_pro">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Description about
+                                                                project</label>
+                                                            <textarea class="form-control"
+                                                                id="exampleFormControlTextarea1" rows="5" name="decription_of_pro"></textarea>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="inputAddress2">Technologies used</label>
+                                                            <input type="text" class="form-control" id="inputAddress2"
+                                                                placeholder="ex:python,django etc." name="techno_of_pro">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlFile1">Share Project
+                                                                images</label>
+                                                            <input type="file" class="form-control-file"
+                                                                id="exampleFormControlFile1" name="image_one" required>
+                                                        </div>
+                                                        <div class="form-group">
+
+                                                            <input type="file" class="form-control-file"
+                                                                id="exampleFormControlFile1" name="image_two" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="file" class="form-control-file"
+                                                                id="exampleFormControlFile1" name="image_three" required>
+                                                                
+                                                        </div>
+                                                       
+                                                        <label for="inputAddress2">Share Project video</label>
+                                                        <div class="form-group">
+                                                            <input type="file" class="form-control-file"
+                                                                id="exampleFormControlFile1" name="video_of_pro" required>
+                                                            
+                                                         
+                                                        </div>
+
+
+
+                                                        <button type="submit" class="btn btn-primary mt-4 Publish">Publish Project</button>
+                                                    </form>
+
+                                                    
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </main>
+
+{% endblock %}

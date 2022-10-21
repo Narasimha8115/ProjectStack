@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}   
+{% block content %}    
+        <main class="row overflow-auto">
+          <div class="col-9 pt-4 mx-auto ">
+              
+
+            <section style="background-color: #eee;">
+                <div class="container py-5">
+                
+            
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="card mb-4">
+                        <div class="card-body text-center">
+                          <img src="{% static 'images/default_profile.jpg' %}" alt="avatar"
+                            class="rounded-circle img-fluid" style="width: 150px; height: 150px;">
+                          <h5 class="my-3">{{ profile_data.username }}</h5>
+                          <p class="text-muted mb-1">Student</p>
+                          <p class="text-muted mb-4">Rajiv gandhi university of knowledge technologies srikakulam</p>
+                       
+                          <div class="d-flex justify-content-center mb-2">
+                            <a href="/profile-edit/{{ user_id }}"><button type="button" class="btn btn-primary" href="profile-edit">Edit profile</button></a>
+                            <!--
+                            <button type="button" class="btn btn-outline-primary ms-1"></button>
+                            -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-8">
+                      <div class="card mb-1">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0">Full Name</p>
+                            </div>
+                            <div class="col-sm-9">
+                              <p class="text-muted mb-0">{{ profile_data.username }}</p>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0">Email</p>
+                            </div>
+                            <div class="col-sm-9">
+                              <p class="text-muted mb-0">{{ profile_data.email }}</p>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0">Phone</p>
+                            </div>
+                            <div class="col-sm-9">
+                              <p class="text-muted mb-0"></p>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0">Profession</p>
+                            </div>
+                            <div class="col-sm-9">
+                              <p class="text-muted mb-0"></p>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0">Address</p>
+                            </div>
+                            <div class="col-sm-9">
+                              <p class="text-muted mb-0"></p>
+                            </div>
+                          </div>
+
+                          <hr>
+                       
+                        </div>
+                      </div>
+                      <div class="card mb-4 ml-auto">
+                        <div class="card-body ">
+                          <div class="row">
+                            <div class="col-sm-5">
+                             <a href="#"> <p class="mb-0 publish ">Pubslished projects</p></a>
+                            </div>
+                            <div class="col-sm-7">
+                              <p class="text-muted mb-0">8</p>
+                            </div>
+                          </div>
+                          </div>
+                          </div>
+                  </div>
+                  
+                    
+                        
+                </div>
+
+
+
+                
+                      
+              </section>
+
+            
+          </div>
+        </main>
+{% endblock %}

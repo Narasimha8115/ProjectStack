@@ -1,0 +1,257 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ProjectStack App</title>
+  <!--meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--bootstsap css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{%static 'css/bootstrap.css'%}">
+  <link rel="stylesheet" href="{%static 'css/bootstrap-grid.css'%}">
+  <link rel="stylesheet" href="{%static 'css/bootstrap-grid-min.css'%}">
+  <link rel="stylesheet" href="{%static 'css/bootstrap-reboot.css'%}">
+  <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+  <link rel="stylesheet" href="{%static 'css/bootstrap-reboot.min.css'%}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+    .Title_stack {
+      font-family: monospace;
+      font-size: 30px;
+    }
+
+    .high_lighter {
+      color: #cc0066;
+    }
+
+    .nav-link {
+      font-family: 'Poppins';
+      line-height: 1.5;
+      font-size: 16.5px;
+      margin-left: 20px;
+      font-weight: 400;
+    }
+
+    .nav-link:hover {
+
+      padding-bottom: 5px;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+      width: fit-content;
+    }
+
+    #nav-item2 {
+      color: #cc0066;
+    }
+
+    #nav-item1:hover {
+      color: #cc0066;
+    }
+
+    #nav-item2:hover {
+      color: #cc0066;
+    }
+
+    .Sign-up-name {
+      font-family: "Poppins";
+    }
+
+    .thumb-img {
+      width: 30%;
+    }
+
+    .output {
+      font-size: 16.5px;
+      display: flex;
+      font-weight: 500;
+      font-family: "Poppins";
+
+
+    }
+
+    .card {
+      font-family: "Poppins";
+    }
+
+    .out {
+      display: flex;
+      justify-content: end;
+      font-family: "Poppins";
+    }
+
+    .widget {
+      margin-left: 50px;
+    }
+
+    #cate {
+      color: black;
+    }
+
+    .for_one_by_one {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .font-s {
+      font-size: large;
+      font-family: "Poppins";
+
+    }
+
+    .follow_name {
+      font-size: 16.5px;
+
+    }
+
+    .for-color {
+      font-size: 16.5px;
+      font-weight: 600;
+
+    }
+
+    #for-c {
+      background-color: white;
+    }
+    #pro-text{
+      border-radius: 5px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!---navbar for login-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow  bg-white rounded ">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+
+        <h2 class="Title_stack">
+          <span class="high_lighter">Project</span>Stack
+        </h2>
+
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation ">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-item-alignment collapse" id="navbarNavAltMarkup">
+
+        <div class="navbar-nav ml-auto ">
+
+
+          <a class="nav-link  active " id="nav-item3" href="#explore-menu-section"><input type="text"
+              placeholder="search projects here" /> </a>
+
+
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle mt-1" href="#" id="nav-item1" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-lg fa-user" width="30" height="30" class="rounded-circle"></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/profile/{{ user_id }}"><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+                <a class="dropdown-item" href="#"><i class="fa fa-pencil-square" aria-hidden="true"></i>Edit Profile</a>
+                <a class="dropdown-item" href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!--nav bar ends here-->
+
+  <!----content starts here-->
+  <div class="container-fluid overflow-hidden">
+    <div class="row vh-100 overflow-auto">
+      <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-dark d-flex sticky-top   shadow shadow-lg rounded "
+        id="sidebar">
+        <div
+          class="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 mt-5 pt-2 text-white">
+
+          <ul
+            class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-4 justify-content-center align-items-center align-items-sm-start"
+            id="menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link  for-color px-sm-0 py-sm-3">
+                <i class="fa fa-lg fa-user-circle-o"></i><span class="ms-1 d-none d-sm-inline">{{ request.user }}</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/project-page" class="nav-link px-sm-0 py-sm-3 ">
+                <i class="fa fa-lg fa-folder-o"></i><span class="ms-1 d-none d-sm-inline">Projects</span>
+              </a>
+            </li>
+            <li>
+              <a href="/add-project" data-bs-toggle="collapse" class="nav-link px-sm-0 py-sm-3">
+                <i class="fa fa-lg fa-folder-open"></i><span class="ms-1 d-none d-sm-inline">Add Project</span> </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-sm-0 py-sm-3 ">
+                <i class="fa fa-lg fa-lightbulb-o"></i><span class="ms-1 d-none d-sm-inline">Share Ideas</span></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link px-sm-0 py-sm-3 " id="dropdown" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fa fa-lg fa-question-circle"></i><span class="ms-1 d-none d-sm-inline">Help</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-sm-0 py-sm-4 ">
+                <i class="fa fa-lg fa-info-circle"></i><span class="ms-1 d-none d-sm-inline">About</span></a>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+      
+      <div class="col d-flex flex-column h-sm-100">
+
+
+        <!----published project cards-->
+   {% block content %}
+
+
+   {% endblock %}
+
+      </div>
+      
+    </div>
+  </div>
+  <!---ends here  -->
+
+
+
+
+
+</body>
+<script src="{% static 'js/bootstrap.js'%}"></script>
+<script src="{% static 'js/bootstrap.bundle.js'%}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+
+</html>

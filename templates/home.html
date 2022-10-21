@@ -1,0 +1,402 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ProjectStack App</title>
+  <!--meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--bootstsap css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{%static 'css/bootstrap.css'%}">
+  <link rel="stylesheet" href="{%static 'css/bootstrap-grid.css'%}">
+  <link rel="stylesheet" href="{%static 'css/bootstrap-grid-min.css'%}">
+  <link rel="stylesheet" href="{%static 'css/bootstrap-reboot.css'%}">
+  <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+  <link rel="stylesheet" href="{%static 'css/bootstrap-reboot.min.css'%}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+  
+
+  <!--Styling starts here-->
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    .Title_stack {
+      font-family: monospace;
+      font-size: 30px;
+    }
+
+    .high_lighter {
+      color: #cc0066;
+    }
+    .link-color{
+      color: black;
+    }
+    .link-color:hover {
+      color: #cc0066;
+    }
+
+    .nav-link {
+      font-family:'Poppins';
+      line-height: 1.5;
+      font-size: 16.5px;
+      margin-left: 15px;
+      font-weight: 400;
+    }
+
+    .nav-link:hover {
+      
+      padding-bottom: 5px;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+      width: fit-content;
+    }
+
+    #nav-item2 {
+      color: #cc0066;
+    }
+
+    #nav-item1:hover {
+      color: #cc0066;
+    }
+
+    #nav-item2:hover {
+      color: #cc0066;
+    }
+    #nav-item3{
+      margin-left: 0px;
+    }
+    .home-icon{
+      margin-right: 0px;
+    }
+    .banner-section-bg-container {
+      background-color:#ffffff ;
+      height: 80.50vh;
+      background-size: cover;
+      font-family: 'Poppins';
+    }
+    .banner-section-heading{
+      font-size: 30px;
+      font-weight: 500;
+
+    }
+    .banner-section-description{
+      font-size: 15px;
+  
+
+    }
+    .custom-button{
+    font-size:15px ;
+    width:  120px;
+    height:43px ;
+    color: #cc0066;
+    background-color:#ffffff ;
+    border-width: 2px;
+    border-radius: 8px;
+   }
+    .custom-button:hover{
+      font-weight: 600;
+    }
+    .banner-image{
+      width: 110%;
+    }
+    .feature-section{
+      background-color:#ffffff ;
+      font-family: 'Poppins';
+    }
+    .feature-section-img{
+      width: 80%;
+      margin-bottom: 2px;
+    }
+    .feature-section-heading{
+      padding-top: 20px;
+      font-size: 22px;
+      font-weight: 500;
+    }
+    .feature-section-description{
+      font-size: 15px;
+     
+    }
+    .feature-section-set{
+      height: 300px;
+
+    }
+    .feauture-main-heading{
+      margin-top: 30px;
+    }
+    .follow-us-section {
+  background-color: white;
+}
+.follow-us-section-heading {
+  text-align: center;
+  color: #183b56;
+  font-family: "Poppins";
+  font-size: 28px;
+  font-weight: 700;
+}
+.follow-us-icon-container {
+  background-color: #faf7e8;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  margin: 15px;
+  padding-top: 22px;
+  padding-bottom: 14px;
+  padding-right: 16px;
+  padding-left: 22px;
+}
+.icon {
+  color: #030303;
+  font-size: 35px;
+}
+
+.footer-section {
+  background-color: #0d2436;
+  color:#959ead ;
+}
+.footer-section-mail-id {
+  color: #959ead;
+  font-family: "Popppins";
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.footer-section-address {
+  color: #959ead;
+  font-family: "Poppins";
+  font-size: 14px;
+}
+.black-highlighter{
+  color: white;
+}
+
+  
+  </style>
+</head>
+
+<body>
+  <!--nav bar starting here-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow p-2 mb-2 bg-white rounded">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+
+        <h2 class="Title_stack">
+          <span class="high_lighter">Project</span>Stack
+        </h2>
+
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation ">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-item-alignment collapse" id="navbarNavAltMarkup">
+
+        <div class="navbar-nav ml-auto mr-3">
+          <a href="/home-page" class="link-color"><i class="fas fa-home fa-lg me-3 fa-fw mt-2  home-icon text-end "  ></i></a>
+          <a class="nav-link active " id="nav-item1" href="/login">Login<span class="sr-only">(current)</span></a>
+          <a class="nav-link  active " id="nav-item1" href="#">About</a>
+          <a class="nav-link  active " id="nav-item2" href="/join">Join for free </a>
+          
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--navbar ended here-->
+     
+  <!--banner starts here-->
+
+  <div class="banner-section-bg-container d-flex flex-column justify-content-center">
+    <div class="banner-section-content pt-2 pb-4 ">
+      <div class="container">
+        <div class="row">
+           <!---banner content starts here-->
+          <div class="col-12-center col-md-6 mt-5 pt-5 text-center">
+            <h1 class="banner-section-heading">
+              Alone we can do so little<br>Together we can do so much
+            </h1>
+            <h3 class="banner-section-description">
+            Share your projects here and inspire others 
+            </h3>
+        
+            <a href="/join"><button class="custom-button ">Join for free</button></a>
+          
+          </div>
+          <!--content endsss here-->
+
+          <!--banner image here-->
+          <div class="col-12 col-md-6 mt-1  text-start">
+            <img
+            src="https://img.freepik.com/free-vector/business-team-discussing-ideas-startup_74855-4380.jpg?w=826&t=st=1664770347~exp=1664770947~hmac=f9ed79bcc473f99a34991a43756aa64d533af3d7d084fd2fd2674aa2303b130d"
+
+            class="banner-image "
+          />
+          </div>
+          <!--banner image  ends here-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--endss here-->
+
+  <!---feautures of the site starts here-->
+  <div class="feature-section pt-3 pb-5">
+    <div class="card text-black border-primary  mr-4 ml-4" style="border-radius: 80px;  ">
+    <div class="card-body p-md-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center ">
+          <h3 class="feauture-main-heading">
+            Features
+          </h3>
+        </div>
+        <div class="col-12 col-md-5 order-1 order-md-1">
+          <div class="text-center">
+            <img
+              src="https://img.freepik.com/free-vector/business-startup-project-launch-successful-idea_107791-13323.jpg?w=826&t=st=1664776847~exp=1664777447~hmac=6039f2b0011e0b7083583a1c005c0c037a921e4b851e8d3f44effd27b14fb9e8"
+              class="feature-section-img"
+            />
+          </div>
+        </div>
+        <div class="col-12 col-md-7 mt-1 text-center pt-5 order-2 order-md-2">
+          <h1 class="feature-section-heading">
+            publish your projects here and </br>inspire the people
+          </h1>
+          <p class="feature-section-description">You can share projects here ,The users of this site will see yout projects.</br>you have to upload 
+            the demo videos ,images,used technologies from your account
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-section pt-1 pb-5">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-12 col-md-5">
+          <div class="text-center">
+            <img
+              src="https://img.freepik.com/free-vector/people-starting-business-project_23-2148866842.jpg?w=740&t=st=1664776826~exp=1664777426~hmac=52d695fe011fe3ccee018c8e54a0e7218fc406294c58c5209646aa8be0528909"
+              class="feature-section-img"
+            />
+          </div>
+        </div>
+
+        <div class="col-12 col-md-7 text-center pt-5 ">
+          <h1 class="feature-section-heading">
+            See the world of projects in</br><span class="high_lighter">ProjectStack</span> 
+          </h1>
+
+          <p class="feature-section-description">By logging into the Projectstack </br> will see the projects and ideas of the talented people and connect with the community.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="feature-section pt-1 ">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-12 col-md-5 pb-0">
+          <div class="text-center">
+            <img
+              src="https://img.freepik.com/free-vector/messaging-fun-concept-illustration_114360-1870.jpg?w=740&t=st=1664784538~exp=1664785138~hmac=a4695124f3e9f70b64f792bdaeaaf499ee336f13db50d41fbf8e5662c7e3efaa"
+              class="feature-section-set"
+            />
+          </div>
+        </div>
+
+        <div class="col-12 col-md-7 text-center pt-5 ">
+          <h1 class="feature-section-heading">
+            Messaging
+          </h1>
+
+          <p class="feature-section-description">
+            You can clarify the doubts on any projects ,</br>This site Provides the facility to contact via messaging to publisher
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  <!----feature section ends-->
+
+  <!--footer-->
+  <div class="follow-us-section pt-1 pb-1" id="followUsSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 pb-0">
+          <h1 class="follow-us-section-heading ">Follow Us</h1>
+        </div>
+        <div class="col-12 pmt-0">
+          <div class="d-flex flex-row justify-content-center">
+            <div class="follow-us-icon-container">
+              <i class="fab fa-twitter icon"></i>
+            </div>
+            <div class="follow-us-icon-container">
+              <i class="fab fa-instagram icon"></i>
+            </div>
+            <div class="follow-us-icon-container">
+              <i class="fab fa-facebook icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-section pt-2 pb-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+
+            <h3 >ProjectStack</h3>
+
+          <h1 class="footer-section-mail-id">projectstack@gmail.com</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+<!---footer ends-->
+
+
+  
+
+
+
+
+
+</body>
+<script src="{% static 'js/bootstrap.js'%}"></script>
+<script src="{% static 'js/bootstrap.bundle.js'%}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+
+
+
+
+</html>

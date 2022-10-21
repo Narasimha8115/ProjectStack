@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{%load static%}
+
+
+{% block content %}
+        <!----published project cards-->
+        {% for post in projectss %}
+        <main class="row overflow-auto">
+          <div class="col-9 pt-4 mx-auto ">
+            <div class="card shadow-lg bg-white rounded mb-5 ">
+              <div class="card-body ">
+                <div class="output ml-2 mb-1">
+                  <a class="nav-lin text-center" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="{% static 'images/IMG_20180523_104114.jpg' %}" width="36" height="36" class="rounded-circle">
+                  </a>
+                  
+
+                    <p class="card-title  pl-2 ">{{ post.author }}</p>
+                   
+                   
+                </div>
+              
+                <div class="output">
+                  <img class="card-img-top thumb-img  ml-2  border border-dark"
+                    src="{{ post.images_one.url }}" alt="Card image cap">
+                  <img class="card-img-top thumb-img  ml-2  border border-dark"
+                    src="{{ post.images_two.url }}" alt="Card image cap">
+                  <img class="card-img-top thumb-img  ml-2  border border-dark"
+                    src="{{ post.images_three.url }}" alt="Card image cap">
+                </div>
+            
+                <h5 class="card-title ml-2 mt-2">{{ post.title }}</h5>
+                <p class="card-text text-start">{{ post.description|safe|truncatewords:"70"|linebreaks }}
+                </p>
+                <div class="output mt-0 ml-2">
+                  <p class="card-text ">Published date </p>
+                  <p class="card-text ml-2"> {{ post.created_at }} </p>
+                </div>
+                <div class="out">
+                  <div class="mr-auto">
+                    <p class="card-text ml-2">Thesis</p>
+                  </div>
+                  <i class="fa fa-share fa-md me-3 fa-fw "></i>
+                  <i class="fa fa-comments fa-md me-3 fa-fw "></i>
+
+                  <i class="fa fa-thumbs-up fa-md me-3 fa-fw "></i>
+                  <i class="fa fa-bookmark fa-md me-3 fa-fw"></i>
+                  <i class="fa fa-download fa-md me-3 fa-fw"></i>
+                </div>
+              </div>
+              
+              
+              
+              <a href="/individual/{{ post.id }}" class="btn btn-primary ml-2 mr-2 mb-2">See full project</a>
+
+
+
+
+            </div>
+
+          </div>
+        </main>
+        {% endfor %}
+
+
+{% endblock %}
+

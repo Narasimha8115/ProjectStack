@@ -1,0 +1,127 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ProjectStack App</title>
+  <!--meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--bootstsap css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{%static 'css/bootstrap.css'%}">
+  <link rel="stylesheet" href="{%static 'css/bootstrap-grid.css'%}">
+  <link rel="stylesheet" href="{%static 'css/bootstrap-grid-min.css'%}">
+  <link rel="stylesheet" href="{%static 'css/bootstrap-reboot.css'%}">
+  <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+  <link rel="stylesheet" href="{%static 'css/bootstrap-reboot.min.css'%}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    .Title_stack {
+      font-family: monospace;
+      font-size: 30px;
+    }
+
+    .high_lighter {
+      color: #cc0066;
+    }
+    .link-color{
+      color: black;
+    }
+    .link-color:hover {
+      color: #cc0066;
+    }
+
+    .nav-link {
+      font-family:'Poppins';
+      line-height: 1.5;
+      font-size: 16.5px;
+      margin-left: 15px;
+      font-weight: 400;
+    }
+
+    .nav-link:hover {
+      
+      padding-bottom: 5px;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+      width: fit-content;
+    }
+
+    #nav-item2 {
+      color: #cc0066;
+    }
+
+    #nav-item1:hover {
+      color: #cc0066;
+    }
+
+    #nav-item2:hover {
+      color: #cc0066;
+    }
+    .Sign-up-name{
+      font-family: "Poppins";
+    }
+    .home-icon{
+      margin-right: 0px;
+    }
+    .message{
+            color: red;
+        }
+  </style>
+</head>
+<body>
+  <!---navbar for login-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow  bg-white rounded ">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+
+        <h2 class="Title_stack">
+          <span class="high_lighter">Project</span>Stack
+        </h2>
+
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation ">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-item-alignment collapse" id="navbarNavAltMarkup">
+
+        <div class="navbar-nav ml-auto mr-3">
+          <a href="/home-page" class ="link-color"><i class="fas fa-home fa-lg me-3 fa-fw mt-2  home-icon " href="/home-page"></i></a>
+          <a class="nav-link active " id="nav-item1" href="/login">Login<span class="sr-only">(current)</span></a>
+          <a class="nav-link  active " id="nav-item1" href="#">About</a>
+          <a class="nav-link  active " id="nav-item2" href="/join">Join for free </a>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--nav bar ends here-->
+  {% block content %}
+
+  {% endblock %}
+
+
+
+</body>
+<script src="{% static 'js/bootstrap.js'%}"></script>
+<script src="{% static 'js/bootstrap.bundle.js'%}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+  </html>
