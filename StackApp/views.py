@@ -1,3 +1,4 @@
+from email import message
 import re
 from django.shortcuts import render,HttpResponse,redirect
 from django.contrib.auth.models import User
@@ -6,6 +7,10 @@ from django.contrib.auth.decorators import login_required
 from .models import Projectss,Profile_Up
 from django.urls import reverse_lazy
 from django.conf.urls.static import static
+
+from django.conf import settings
+from django.core.mail import send_mail
+
 
 # Create your views here.
 
@@ -31,10 +36,16 @@ def join(request):
         email = request.POST.get('email') 
         password = request.POST.get('password')
         repeat_pass = request.POST.get('repeat-pass')
-        
 
         user = User.objects.create_user(username=username,email=email,password=password)
         user.save()
+
+        subject = "Account created succesfully PROJECTSTACK"
+        message = f'hello {user.username},\nThank you for creating an account on our ProjectStack site.We are glad you are going to exploring ProjectStack!\n Explore the projects now and share your great ideas,GOOD LUCK\n If you have forgotten your password (it happens to the best of us), use the Forgot password? link to reset it.\n Regards,\nProjectStack site'
+        email_from = settings.EMAIL_HOST_USER
+        recipient_list = [email]
+
+        send_mail(subject,message,email_from,recipient_list)
 
         return redirect("login_user") 
     return render(request,"join.html")

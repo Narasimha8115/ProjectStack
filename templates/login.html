@@ -7,11 +7,11 @@
         <div class="col-lg-12 col-xl-11 ">
           <div class="card text-black  " style="border-radius: 10px;">
             <div class="card-body p-md-5">
-              <div class="row justify-content-center">
+              <div class="row ">
                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1 ">
   
                   <p class="text-center h2 bold mb-5 mx-1 mx-md-4 mt-4 Sign-up-name">Login</p>
-  
+                  <!--FORM CARD STARTS HERE.-->
                   <form action="/login" method="POST" class="mx-1 mx-md-4">
                     {% csrf_token %}
   
@@ -36,7 +36,7 @@
   
                     <div class="form-check d-flex justify-content-center mb-2">
                       
-                      <label class="text-center "></label>
+                      <label class="text-center ">
                         Dont have account yet?<a href="/join">  Join</a>
                       </label>
                     </div>
@@ -46,6 +46,8 @@
                     </div>
   
                   </form>
+
+                  <!--FORM ENDS HERE -->
   
                 </div>
                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
